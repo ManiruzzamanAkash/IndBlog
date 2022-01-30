@@ -1,0 +1,15 @@
+{
+  "name": "indblog",
+  "version": "0.0.1",
+  "description": "A WordPress theme for industry owners blogging",
+  "author": "weDevs",
+  "license": "GPL",
+  "private": true,
+  "devDependencies": {
+    "grunt": "^1.4.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.1.0",
+    "grunt-wp-i18n": "^1.0.3",
+    "node-sass": "^7.0.1"
+  }
+}
