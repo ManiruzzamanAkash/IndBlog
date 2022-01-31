@@ -1,0 +1,192 @@
+/**
+ * #.# Main Content Section
+ *
+ * CSS related to main content section.
+ */
+.indblog-section {
+    margin: 40px 0;
+
+    .indblog-section-title {
+        font-size: 1.8rem;
+        font-weight: 200;
+        margin-bottom: 1.5rem;
+        color: $primary;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: $success;
+            margin: 0.5em 0em;
+        }
+    }
+}
+
+.indblog-article-img-overlay {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.indblog-article-content-first {
+    background: #fff;
+    display: inline-block;
+    margin-top: 10rem;
+    margin-left: 15rem;
+    border-radius: 0 60px 0 60px;
+    padding: 60px 30px;
+    margin-right: 10px;
+    margin-bottom: -65px;
+    box-shadow: 2px -9px 4px 12px #80808012 !important;
+}
+
+/* Single Article Content CSS */
+.indblog-article-content {
+    margin-bottom: $font-size-base;
+    box-shadow: none;
+
+    img {
+        width: 100%;
+    }
+
+    .article-category-name {
+        color: $success;
+        text-decoration: none;
+    }
+
+    .article-title {
+        a {
+            color: $gray-700;
+            font-size: $font-size-lg;
+            text-decoration: none;
+        }
+    }
+
+    .article-excerpt {
+        color: $gray-700;
+        font-size: $font-size-base;
+        font-weight: 100;
+        margin: 1.5rem 0 1.5rem 1.5rem;
+    }
+
+    .inner-area {
+        padding: 1.2rem 2rem;
+        box-shadow: 4px 5px 20px 11px #80808012;
+    }
+
+    .article-meta {
+        margin-top: $font-size-base;
+        font-size: $font-size-sm;
+        color: $gray-500;
+    }
+}
+
+.indblog-article-content-sm {
+    img {
+        height: 110px;
+    }
+}
+
+.indblog-article-content-md {
+    img {
+        height: 170px;
+    }
+}
+
+.indblog-most-viewed-article {
+    .article-switch {
+        color: $primary;
+        font-size: $font-size-base;
+    }
+}
+
+/* Content right side subscribe */
+.indblog-subscribe {
+    height: 500px;
+    margin-left: 20px;
+    letter-spacing: 2px;
+
+    .subscribe-text {
+        color: $primary;
+        font-size: $font-size-base;
+        font-weight: 600;
+    }
+
+    .subscribe-input {
+        margin-top: 10px;
+
+        input {
+            border: 2px solid $primary;
+            border-top: none;
+            border-radius: 0px;
+            display: inline-block;
+            padding: 7px 35px;
+            font-weight: 200;
+
+            &::placeholder {
+                color: $primary;
+            }
+
+            &:focus {
+                color: $primary;
+                box-shadow: none;
+            }
+        }
+
+        .send-email-button {
+            background-color: $primary;
+            border-radius: 0px 10px;
+            position: absolute;
+            color: #fff;
+            padding: 5px;
+            padding-left: 7px;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            margin-left: -15px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+/**
+ * #.# Filter Section
+ *
+ * CSS related to filter section
+ */
+.indblog-filter-dropdown {
+    margin-bottom: 3rem;
+
+    .dropdown-item {
+        padding: 0.5rem 1rem;
+        color: $primary;
+    }
+
+    .dropdown-menu {
+        min-width: 13rem;
+        padding: 0.5rem 0;
+        margin-top: -2px !important;
+        border-radius: 0px;
+        border-top: 0px;
+    }
+
+    .dropdown-toggle {
+        border: 2px solid $primary;
+        color: $primary;
+        cursor: pointer;
+        padding: 10px 25px;
+
+        &::after {
+            display: none;
+        }
+    }
+
+}
+
+.btn-load-more {
+    &:hover {
+        transition: .3s all;
+        opacity: .8;
+    }
+}

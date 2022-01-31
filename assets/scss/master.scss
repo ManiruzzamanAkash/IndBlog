@@ -1,0 +1,19 @@
+// Include variables
+@import "./__variables";
+
+// Include Bootstrap CSS file
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+/* Include our custom components styles. */
+
+// Navbar SCSS
+@import "./navbar";
+
+// Slider SCSS
+@import "./slider";
+
+// Website Main Content(Articles) SCSS
+@import "./contents";
+
+// Footer SCSS
+@import "./footer";

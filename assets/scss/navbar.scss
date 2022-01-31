@@ -1,0 +1,15 @@
+/**
+ * #.# Navbar
+ *
+ * Navbar CSS.
+ */
+.navbar-nav {
+    padding: 0.75rem;
+
+    .nav-item {
+        .nav-link {
+            color: $primary;
+            font-weight: 200;
+        }
+    }
+}

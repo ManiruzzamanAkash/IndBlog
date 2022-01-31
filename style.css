@@ -1,0 +1,83 @@
+/*
+Theme Name: IndBlog
+Author: Maniruzzaman Akash
+Description: A WordPress theme for industry owners blogging
+Version: 0.0.1
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
+Text Domain: indblog
+Tags: wordpress theme, blog, business, industry dive
+*/
+
+/* =Reset
+-------------------------------------------------------------- */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: .9;
+    transition: .3s all;
+}

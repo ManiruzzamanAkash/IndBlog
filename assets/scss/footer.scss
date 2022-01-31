@@ -1,0 +1,117 @@
+/**
+ * #.# Footer
+ *
+ * Footer portion CSS
+ */
+.indblog-footer {
+    background-color: #E2E3E4;
+    color: $gray-800;
+    padding: 40px 0px 60px 0px;
+
+    .footer-menus {
+        list-style: none;
+
+        li {
+            display: inline;
+            padding-right: 10px;
+        }
+    }
+
+    .footer-social-icons {
+        list-style: none;
+        text-align: right;
+
+        li {
+            display: inline;
+            padding-right: 5px;
+        }
+
+        a {
+            color: $gray-800;
+            font-size: $font-size-base;
+            margin-left: 10px;
+        }
+    }
+
+    .subscribe-input {
+        margin-top: 10px;
+
+        input {
+            border: 2px solid $gray-700;
+            border-radius: 0px;
+            display: inline-block;
+            padding: 7px 35px;
+            font-weight: 200;
+            background: transparent;
+            display: inline-block;
+            width: 95%;
+
+            &::placeholder {
+                color: $gray-700;
+            }
+
+            &:focus {
+                color: $gray-700;
+                box-shadow: none;
+            }
+        }
+
+        .send-email-button {
+            background-color: #fff;
+            border-radius: 0px 10px;
+            position: absolute;
+            color: $gray-700;
+            padding: 5px;
+            padding-left: 7px;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            margin-left: -15px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+        font-weight: 200;
+    }
+}
+
+/* Footer Left Side static social icon bar */
+.indblog-social-icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    a {
+        display: block;
+        text-align: center;
+        padding: 8px;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 20px;
+
+        &.social-facebook {
+            background-color: #425A95;
+        }
+
+        &.social-twitter {
+            background-color: #579DD5;
+        }
+
+        &.social-google {
+            background-color: #E24C40;
+        }
+
+        &.social-linkedin {
+            background-color: #2C76B2;
+        }
+
+        &.social-gmail {
+            background-color: #848585;
+        }
+    }
+
+}

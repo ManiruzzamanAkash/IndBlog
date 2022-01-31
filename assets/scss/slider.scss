@@ -1,0 +1,17 @@
+/**
+ * #.# Slider
+ *
+ * Slider portion CSS
+ */
+.indblog-slider {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+
+    .slider-article {
+        border-bottom: 2px solid $green;
+        padding-bottom: 1rem;
+    }
+}

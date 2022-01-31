@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IndBlog 0.0.1\n"
 "Report-Msgid-Bugs-To: https://github.com/ManiruzzamanAkash/IndBlog/issues\n"
-"POT-Creation-Date: 2022-01-30 09:22:15+00:00\n"
+"POT-Creation-Date: 2022-01-31 02:47:46+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,12 +13,121 @@ msgstr ""
 "Language-Team: LANGUAGE <manirujjamanakash@gmail.com>\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: functions.php:41
+#: functions.php:44
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:42
+#: functions.php:45
 msgid "Secondary Menu"
+msgstr ""
+
+#: index.php:31 index.php:57 index.php:533
+msgid "Insights"
+msgstr ""
+
+#: index.php:36 index.php:175 index.php:199 index.php:246 index.php:273
+#: index.php:365 index.php:389 index.php:416 index.php:443 index.php:470
+#: index.php:497 index.php:538
+msgid "Industries"
+msgstr ""
+
+#: index.php:41 index.php:143 index.php:333 index.php:543
+msgid "Innovations"
+msgstr ""
+
+#: index.php:61
+msgid "All Content"
+msgstr ""
+
+#: index.php:74
+msgid "Featured"
+msgstr ""
+
+#: index.php:77
+msgid "Voluptus ea fugit commodi"
+msgstr ""
+
+#: index.php:80
+msgid "Industry"
+msgstr ""
+
+#: index.php:83
+msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos."
+msgstr ""
+
+#: index.php:86 index.php:97 index.php:108 index.php:119
+msgid "Jhon Doe"
+msgstr ""
+
+#: index.php:86 index.php:99 index.php:110 index.php:121 index.php:160
+#: index.php:186 index.php:210 index.php:257 index.php:284 index.php:350
+#: index.php:376 index.php:400 index.php:427 index.php:454 index.php:481
+#: index.php:508
+msgid "1 Minute read"
+msgstr ""
+
+#: index.php:94 index.php:105 index.php:116
+msgid "Innovation"
+msgstr ""
+
+#: index.php:95 index.php:106 index.php:117
+msgid "Voluptas ea fugit commodi ..."
+msgstr ""
+
+#: index.php:134
+msgid "Latest Articles"
+msgstr ""
+
+#: index.php:148 index.php:180 index.php:204 index.php:251 index.php:278
+#: index.php:338 index.php:370 index.php:394 index.php:421 index.php:448
+#: index.php:475 index.php:502
+msgid "How to build a successful business"
+msgstr ""
+
+#: index.php:158 index.php:184 index.php:208 index.php:255 index.php:282
+#: index.php:348 index.php:374 index.php:398 index.php:425 index.php:452
+#: index.php:479 index.php:506
+msgid "John Doe"
+msgstr ""
+
+#: index.php:228
+msgid "Most Viewed"
+msgstr ""
+
+#: index.php:299 index.php:560
+msgid "Enter your email"
+msgstr ""
+
+#: index.php:318
+msgid "Filter - Industries"
+msgstr ""
+
+#: index.php:519
+msgid "Load More"
+msgstr ""
+
+#: index.php:550
+msgid "Contact Us"
+msgstr ""
+
+#: index.php:557
+msgid "Subscribe to our newsletter"
+msgstr ""
+
+#: index.php:570
+msgid "Copyright © All Rights Reserved"
+msgstr ""
+
+#: template-parts/header/site-nav.php:11
+msgid "Primary menu"
+msgstr ""
+
+#: template-parts/header/site-nav.php:14
+msgid "Menu"
+msgstr ""
+
+#: template-parts/header/site-nav.php:17
+msgid "Close"
 msgstr ""
 
 #. Theme Name of the plugin/theme
