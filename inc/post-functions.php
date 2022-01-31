@@ -17,9 +17,11 @@ if ( ! function_exists( 'indblog_get_post_categories' ) ) {
      * @since IND_BLOG_SINCE
      *
      * @param string $post
+     * @param bool $for_slider
+     *
      * @return string
      */
-    function indblog_get_post_categories( $post_id ) {
+    function indblog_get_post_categories( $post_id, $for_slider = false ) {
 
         $post_categories = wp_get_post_categories( $post_id );
         $categories      = '';
@@ -28,8 +30,9 @@ if ( ! function_exists( 'indblog_get_post_categories' ) ) {
             $category = get_category( $cat );
             $categories .= sprintf(
                 /* translators: 1) Category URL, 2) Category Name */
-                __( "<a href='%s' class='article-category-name mr-2'>%s</a>" ),
+                __( "<a href='%s' class='article-category-name mr-2 %s'>%s</a>" ),
                 __( get_category_link( $category ) ),
+                'text-white',
                 $category->name
             );
         }
