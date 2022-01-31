@@ -67,6 +67,7 @@ add_action( 'after_setup_theme', 'indblog_setup' );
 /**
  * Include required files.
  */
+require get_template_directory() . '/inc/ajax-actions.php';
 require get_template_directory() . '/inc/defaults.php';
 require get_template_directory() . '/inc/general.php';
 require get_template_directory() . '/inc/reading-time.php';

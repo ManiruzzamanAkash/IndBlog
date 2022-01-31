@@ -7947,7 +7947,15 @@ textarea.form-control-lg {
       margin-top: 5px;
       margin-left: -15px;
       width: 30px;
-      height: 30px; }
+      height: 30px;
+      cursor: pointer; }
+  .indblog-subscribe .subscribe-processing input {
+    background: #1f4393;
+    color: #fff;
+    opacity: .4;
+    cursor: not-allowed; }
+  .indblog-subscribe .subscribe-processing .send-email-button {
+    opacity: .5; }
 
 /**
  * #.# Filter Section

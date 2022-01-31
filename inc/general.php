@@ -26,7 +26,21 @@ if ( ! function_exists( 'indblog_scripts' ) ) {
 
         // Enqueue Scripts.
         wp_enqueue_script( 'indblog-bootstrap', $dir_uri . "/assets/vendors/bootstrap/bootstrap.bundle.min.js", false, '5.1.3' );
-        wp_enqueue_script( 'indblog-script', $dir_uri . "/assets/js/main.js", array(), GENERATE_VERSION );
+        wp_enqueue_script( 'indblog-script', $dir_uri . "/assets/js/main.js", array( 'jquery' ), GENERATE_VERSION );
+
+        // Load localize script.
+        wp_localize_script(
+            'indblog-script',
+            'indblog_data',
+            array(
+                'ajaxurl' => admin_url( 'admin-ajax.php' ),
+                'nonce'   => wp_create_nonce( 'indblog_nonce' ),
+                'i18n'    => array(
+                    'subscribe_email_required' => __( 'Email is required.', 'indblog' ),
+                    'subscribe_email_invalid'  => __( 'Email is invalid.', 'indblog' ),
+                ),
+            )
+        );
     }
 }
 
