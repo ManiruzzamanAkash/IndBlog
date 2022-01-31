@@ -60,3 +60,61 @@ if ( ! function_exists( 'indblog_inc_post_view' ) ) {
     }
 }
 add_action( 'indblog_header', 'indblog_inc_post_view' );
+
+if ( ! function_exists( 'indblog_add_post_metabox_featured' ) ) {
+
+    /**
+     * Add an action to add metabox to post.
+     *
+     * @since IND_BLOG_SINCE
+     */
+    function indblog_add_post_metabox_featured() {
+        add_meta_box(
+            'indblog_post_featured_metabox',
+            __( 'Is Featured ?', 'indblog' ),
+            'indblog_post_featured_metabox',
+            'post',
+            'advanced',
+            'high'
+        );
+    }
+
+    /**
+     * Render Featured Meta box content.
+     *
+     * @return void
+     */
+    function indblog_post_featured_metabox() {
+        $post_id  = get_the_ID();
+        $featured = get_post_meta( $post_id, 'indblog_post_featured', true );
+        ?>
+        <div class="indblog-post-featured-metabox">
+            <label for="indblog_post_featured">
+                <input type="checkbox" name="indblog_post_featured" id="indblog_post_featured" value="1" <?php checked( $featured, 1 ); ?> />
+                <?php _e( 'Featured', 'indblog' ); ?>
+            </label>
+        </div>
+        <?php
+    }
+}
+
+if ( ! function_exists( 'indblog_add_post_metabox_featured_save' ) ) {
+
+    /**
+     * Save featured metabox data.
+     *
+     * @since IND_BLOG_SINCE
+     */
+    function indblog_add_post_metabox_featured_save() {
+        $post_id = get_the_ID();
+
+        if ( isset( $_POST['indblog_post_featured'] ) ) {
+            update_post_meta( $post_id, 'indblog_post_featured', 1 );
+        } else {
+            delete_post_meta( $post_id, 'indblog_post_featured' );
+        }
+    }
+}
+
+add_action( 'add_meta_boxes', 'indblog_add_post_metabox_featured' );
+add_action( 'save_post', 'indblog_add_post_metabox_featured_save' );
