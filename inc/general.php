@@ -45,3 +45,22 @@ if ( ! function_exists( 'indblog_disable_admin_bar' ) ) {
 }
 
 add_filter( 'show_admin_bar', 'indblog_disable_admin_bar' );
+
+
+if ( ! function_exists( 'indblog_disable_gutenberg' ) ) {
+    /**
+    * Disable Gutenberg editor
+    *
+    * @since IND_BLOG_SINCE
+    */
+    function indblog_disable_gutenberg( $current_status, $post_type ) {
+        if ( 'post' === $post_type ) {
+            return false;
+        }
+
+        return $current_status;
+    }
+}
+
+
+add_filter( 'use_block_editor_for_post_type', 'indblog_disable_gutenberg', 10, 2 );
