@@ -33,55 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     do_action( 'indblog_before_header' );
     ?>
 
-    <!-- Header: Navbar and Page Description header -->
-    <header>
-        <nav class="indblog-navbar navbar navbar-expand-lg navbar-light bg-white">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <?php esc_html_e('Insights', 'indblog'); ?>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <?php esc_html_e('Industries', 'indblog'); ?>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <?php esc_html_e('Innovations', 'indblog'); ?>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">
-                                <i class="fa fa-search"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav> <!-- indblog-navbar -->
-
-        <div class="indblog-page-top-links bg-primary text-white">
-            <div class="container text-center">
-                <p class="p-2 fs-6">
-                    <?php esc_html_e('Insights', 'indblog'); ?>
-                    &nbsp;&nbsp;
-                    >
-                    &nbsp;&nbsp;
-                    <?php esc_html_e('All Content', 'indblog'); ?>
-                </p>
-            </div>
-        </div> <!-- indblog-page-top-links -->
-    </header>
+    <?php get_template_part( 'template-parts/header/site-header' ); ?>
 
     <?php
     /**

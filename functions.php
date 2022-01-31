@@ -41,8 +41,8 @@ if ( ! function_exists( 'indblog_setup' ) ) {
 
         // Add support for two custom navigation menus.
         register_nav_menus( array(
-            'primary'   => __( 'Primary Menu', 'indblog' ),
-            'secondary' => __('Secondary Menu', 'indblog' )
+            'primary'   => esc_html__( 'Primary Menu', 'indblog' ),
+            'secondary' => esc_html__('Secondary Menu', 'indblog' )
         ) );
 
         /**
