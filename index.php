@@ -1,68 +1,21 @@
-<!DOCTYPE html>
-<html class="no-js" <?php language_attributes(); ?>>
+<?php
+/**
+ * The main template file.
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package indblog
+ */
 
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php wp_head(); ?>
-</head>
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly.
+}
 
-<body <?php body_class(); ?>>
-
-    <?php
-    wp_body_open();
-    ?>
-
-    <!-- Header: Navbar and Page Description header -->
-    <header>
-        <nav class="indblog-navbar navbar navbar-expand-lg navbar-light bg-white">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <?php esc_html_e('Insights', 'indblog'); ?>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <?php esc_html_e('Industries', 'indblog'); ?>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <?php esc_html_e('Innovations', 'indblog'); ?>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">
-                                <i class="fa fa-search"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav> <!-- indblog-navbar -->
-
-        <div class="indblog-page-top-links bg-primary text-white">
-            <div class="container text-center">
-                <p class="p-2 fs-6">
-                    <?php esc_html_e('Insights', 'indblog'); ?>
-                    &nbsp;&nbsp;
-                    >
-                    &nbsp;&nbsp;
-                    <?php esc_html_e('All Content', 'indblog'); ?>
-                </p>
-            </div>
-        </div> <!-- indblog-page-top-links -->
-    </header>
+get_header(); ?>
 
     <!-- Section: Slider -->
     <section class="indblog-section indblog-slider mt-0 bg-success" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/slider.jpg')">
@@ -522,85 +475,4 @@
         </div>
     </section><!-- indblog-filter -->
 
-    <!-- Section: Footer -->
-    <footer class="indblog-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-sm-12">
-                    <ul class="footer-menus">
-                        <li>
-                            <a href="#">
-                                <?php esc_html_e('Insights', 'indblog'); ?>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <?php esc_html_e('Industries', 'indblog'); ?>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <?php esc_html_e('Innovations', 'indblog'); ?>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <div class="mt-4">
-                        <p>
-                            <?php esc_html_e('Contact Us', 'indblog'); ?>
-                            <i class="fa fa-phone"></i> 18666715353
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <p>
-                        <?php esc_html_e('Subscribe to our newsletter', 'indblog'); ?>
-                    </p>
-                    <p class="subscribe-input subscribe-input-footer mt-4">
-                        <input class="form-control" type="email" placeholder="<?php esc_attr_e('Enter your email', 'indblog'); ?>" />
-                        <span class="send-email-button">
-                            <i class="fa fa-envelope"></i>
-                        </span>
-                    </p>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-md-8">
-                    <p class="copyright">
-                        <?php esc_html_e('Copyright © All Rights Reserved', 'indblog'); ?>
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <ul class="footer-social-icons">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer> <!-- footer -->
-
-
-    <!-- Sticky Social Sharing Option -->
-    <div class="indblog-social-icon-bar">
-        <a href="#" class="social-facebook"><i class="fa fa-facebook"></i></a>
-        <a href="#" class="social-twitter"><i class="fa fa-twitter"></i></a>
-        <a href="#" class="social-google"><i class="fa fa-google"></i></a>
-        <a href="#" class="social-linkedin"><i class="fa fa-linkedin"></i></a>
-        <a href="#" class="social-gmail"><i class="fa fa-envelope"></i></a>
-    </div>
-    <!-- End Sticky Social Sharing Option -->
-
-</body>
-
-</html>
+<?php get_footer(); ?>
