@@ -4,13 +4,16 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Indblog
+ * @package indblog
  * @since   IND_BLOG_SINCE
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
+
+// Set our theme version.
+define( 'GENERATE_VERSION', '0.1.1' );
 
 if ( ! function_exists( 'indblog_setup' ) ) {
 
@@ -22,7 +25,7 @@ if ( ! function_exists( 'indblog_setup' ) ) {
     function indblog_setup() {
 
         // Make theme available for translation.
-        load_theme_textdomain( 'indblogdoman', get_template_directory() . '/languages' );
+        load_theme_textdomain( 'indblog', get_template_directory() . '/languages' );
 
         // Add default posts and comments RSS feed links to &lt;head>
         add_theme_support( 'automatic-feed-links' );
@@ -38,8 +41,8 @@ if ( ! function_exists( 'indblog_setup' ) ) {
 
         // Add support for two custom navigation menus.
         register_nav_menus( array(
-            'primary'   => __( 'Primary Menu', 'indblogdoman' ),
-            'secondary' => __('Secondary Menu', 'indblogdoman' )
+            'primary'   => __( 'Primary Menu', 'indblog' ),
+            'secondary' => __('Secondary Menu', 'indblog' )
         ) );
 
         /**
@@ -48,7 +51,7 @@ if ( ! function_exists( 'indblog_setup' ) ) {
         */
         global $content_width;
         if ( ! isset( $content_width ) ) {
-            $content_width = 1200; /* pixels */
+            $content_width = 800; /* pixels */
         }
 
         /**
@@ -60,3 +63,9 @@ if ( ! function_exists( 'indblog_setup' ) ) {
 }
 
 add_action( 'after_setup_theme', 'indblog_setup' );
+
+/**
+ * Include required files.
+ */
+require get_template_directory() . '/inc/defaults.php';
+require get_template_directory() . '/inc/general.php';
