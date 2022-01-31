@@ -54,11 +54,12 @@ if ( ! function_exists( 'indblog_construct_footer' ) ) {
                             <?php esc_html_e('Subscribe to our newsletter', 'indblog'); ?>
                         </p>
                         <p class="subscribe-input subscribe-input-footer mt-4">
-                            <input class="form-control" type="email" placeholder="<?php esc_attr_e('Enter your email', 'indblog'); ?>" />
+                            <input class="form-control" name="subscribe_email" type="email" placeholder="<?php esc_attr_e('Enter your email', 'indblog'); ?>" />
                             <span class="send-email-button">
                                 <i class="fa fa-envelope"></i>
                             </span>
                         </p>
+                        <p class="subscribe-message mt-2 alert"></p>
                     </div>
                 </div>
                 <div class="row mt-5">

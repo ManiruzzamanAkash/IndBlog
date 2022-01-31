@@ -52,4 +52,11 @@ jQuery(function ($) {
         });
     });
 
+    // -------------------------------------------------------------
+    //   Email subscription input handler on input change
+    // -------------------------------------------------------------
+    $('input[name="subscribe_email"]').on('input', function (e) {
+        $('input[name="subscribe_email"]').val(e.target.value);
+    });
+
 });
