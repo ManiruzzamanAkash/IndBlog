@@ -136,7 +136,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-8">
                     <article>
-                        <div class="indblog-article-img-overlay" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/article-demo.jpg')">
+                        <div class="indblog-article-img-overlay mb-3" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/article-demo.jpg')">
                             <div class="indblog-article-content indblog-article-content-first">
                                 <p>
                                     <a href="#" class="article-category-name">
@@ -326,7 +326,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-8">
                     <article>
-                        <div class="indblog-article-img-overlay" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/article-demo.jpg')">
+                        <div class="indblog-article-img-overlay mb-3" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/article-demo.jpg')">
                             <div class="indblog-article-content indblog-article-content-first">
                                 <p>
                                     <a href="#" class="article-category-name">

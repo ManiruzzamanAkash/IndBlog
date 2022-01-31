@@ -1,0 +1,66 @@
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
+
+    html,
+    body {
+        font-size: 14px;
+    }
+
+    .indblog-slider {
+        margin: 10px 0;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .indblog-article-content-first {
+        background: #fff;
+        margin-top: 2rem;
+        margin-left: 1rem;
+        border-radius: 0 60px;
+        padding: 20px;
+    }
+
+    .indblog-subscribe {
+        height: 200px;
+    }
+
+    .indblog-social-icon-bar {
+        top: 87.5%;
+        -webkit-transform: translateX(15%);
+        -ms-transform: translateX(15%);
+        transform: translateX(15%);
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+        }
+    }
+}
+
+/* Small screen devices (600px and below) */
+@media only screen and (max-width: 600px) {}
+
+/* Medium screen devices (768px and below) */
+@media only screen and (max-width: 768px) {
+    .indblog-article-content-first {
+        background: #fff;
+        margin-top: 2rem;
+        margin-left: 1rem;
+        border-radius: 0 60px;
+        padding: 20px;
+    }
+
+    .indblog-footer  {
+        text-align: center;
+
+        .footer-social-icons {
+            display: none;
+        }
+    }
+}
+
+/* Big screen devices (889px and below) */
+@media only screen and (max-width: 889px) {}
+
+/* Extra big screen devices (1200px and below) */
+@media only screen and (max-width: 1200px) {}
