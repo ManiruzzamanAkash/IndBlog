@@ -69,6 +69,8 @@ add_action( 'after_setup_theme', 'indblog_setup' );
  */
 require get_template_directory() . '/inc/defaults.php';
 require get_template_directory() . '/inc/general.php';
+require get_template_directory() . '/inc/reading-time.php';
+require get_template_directory() . '/inc/post-functions.php';
 
 /**
  * Load theme structure files
