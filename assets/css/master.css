@@ -7912,6 +7912,21 @@ textarea.form-control-lg {
 .indblog-article-content-md img {
   height: 170px; }
 
+.recent-post-sidebar li {
+  list-style: none;
+  margin-left: 2rem;
+  border-bottom: 1px dotted #e9ecef;
+  padding-bottom: 10px; }
+
+.archive-page .indblog-article-content-sm img {
+  height: 400px; }
+
+.archive-page .tag-cloud-link {
+  margin-left: 2rem;
+  border-bottom: 1px dotted #e9ecef;
+  padding-bottom: 10px;
+  font-size: 1rem; }
+
 .indblog-most-viewed-article .article-switch {
   color: #1F4393;
   font-size: 1rem; }

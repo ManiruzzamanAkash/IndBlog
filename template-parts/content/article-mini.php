@@ -19,8 +19,10 @@ $post_category = get_the_category( $post->ID );
 
 <article>
     <div class="indblog-article-content indblog-article-content-sm">
+    <a href="<?php echo esc_url( get_permalink( $post ) ); ?>">
         <img src="<?php echo esc_url( get_the_post_thumbnail_url( $post ) ); ?>" alt="" class="img img-fluid">
-        <div class="inner-area">
+    </a>
+    <div class="inner-area">
             <p>
                 <?php echo indblog_get_post_categories( $post->ID ); ?>
             </p>
