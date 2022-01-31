@@ -7817,11 +7817,14 @@ textarea.form-control-lg {
  *
  * Navbar CSS.
  */
-.navbar-nav {
+.indblog-navbar .navbar-nav {
   padding: 0.75rem; }
-  .navbar-nav .nav-item .nav-link {
+  .indblog-navbar .navbar-nav .nav-item .nav-link {
     color: #1F4393;
     font-weight: 200; }
+
+.indblog-navbar .site-branding img {
+  height: 50px; }
 
 /**
  * #.# Slider
@@ -7912,7 +7915,7 @@ textarea.form-control-lg {
 
 /* Content right side subscribe */
 .indblog-subscribe {
-  height: 500px;
+  height: 450px;
   margin-left: 20px;
   letter-spacing: 2px; }
   .indblog-subscribe .subscribe-text {

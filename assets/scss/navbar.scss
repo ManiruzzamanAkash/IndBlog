@@ -3,13 +3,21 @@
  *
  * Navbar CSS.
  */
-.navbar-nav {
-    padding: 0.75rem;
+.indblog-navbar {
+    .navbar-nav {
+        padding: 0.75rem;
 
-    .nav-item {
-        .nav-link {
-            color: $primary;
-            font-weight: 200;
+        .nav-item {
+            .nav-link {
+                color: $primary;
+                font-weight: 200;
+            }
+        }
+    }
+
+    .site-branding {
+        img {
+            height: 50px;
         }
     }
 }

@@ -101,77 +101,12 @@ get_header(); ?>
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-7">
-                <div class="d-flex justify-content-between">
-                    <h2 class="indblog-section-title">
-                        <?php esc_html_e('Most Viewed', 'indblog'); ?>
-                    </h2>
-                    <div class="article-switch">
-                        <span class="previous-post">
-                            <i class="fa fa-arrow-left"></i>
-                        </span class="next-post">
-                        <i class="fa fa-arrow-right"></i>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6">
-                        <!-- Single Mini Article -->
-                        <article>
-                            <div class="indblog-article-content indblog-article-content-md">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/article-demo.jpg" alt="" class="img img-fluid">
-                                <div class="inner-area">
-                                    <p>
-                                        <a href="#" class="article-category-name">
-                                            <?php esc_html_e('Industries', 'indblog'); ?>
-                                        </a>
-                                    </p>
-                                    <h4 class="article-title">
-                                        <a href="#">
-                                            <?php esc_html_e('How to build a successful business', 'indblog'); ?>
-                                        </a>
-                                    </h4>
-                                    <p class="article-meta">
-                                        <?php esc_html_e('John Doe', 'indblog'); ?>
-                                        &nbsp;&nbsp;
-                                        <?php esc_html_e('1 Minute read', 'indblog'); ?>
-                                    </p>
-                                </div>
-                            </div>
-                        </article>
-                        <!-- End Single Mini Article -->
-                    </div>
-
-                    <div class="col-sm-12 col-md-6">
-                        <!-- Single Mini Article -->
-                        <article>
-                            <div class="indblog-article-content indblog-article-content-md">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/article-demo.jpg" alt="" class="img img-fluid">
-                                <div class="inner-area">
-                                    <p>
-                                        <a href="#" class="article-category-name">
-                                            <?php esc_html_e('Industries', 'indblog'); ?>
-                                        </a>
-                                    </p>
-                                    <h4 class="article-title">
-                                        <a href="#">
-                                            <?php esc_html_e('How to build a successful business', 'indblog'); ?>
-                                        </a>
-                                    </h4>
-                                    <p class="article-meta">
-                                        <?php esc_html_e('John Doe', 'indblog'); ?>
-                                        &nbsp;&nbsp;
-                                        <?php esc_html_e('1 Minute read', 'indblog'); ?>
-                                    </p>
-                                </div>
-                            </div>
-                        </article>
-                        <!-- End Single Mini Article -->
-                    </div>
-                </div>
+            <?php get_template_part( 'template-parts/content/most-viewed-posts' ); ?>
             </div>
             <div class="col-sm-12 col-md-5">
                 <!-- Newsletter subscribe -->
                 <div class="indblog-subscribe d-flex align-items-center">
-                    <div>
+                    <div class="w-100">
                         <p class="subscribe-text"><?php echo wp_kses('Subscribe to our newsletter <br> for the latest update', array('br' => array())); ?></p>
                         <p class="subscribe-input">
                             <input class="form-control" type="email" placeholder="<?php esc_attr_e('Enter your email', 'indblog'); ?>" />

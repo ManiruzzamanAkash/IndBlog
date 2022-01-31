@@ -37,3 +37,26 @@ if ( ! function_exists( 'indblog_get_post_categories' ) ) {
         return $categories;
     }
 }
+
+
+if ( ! function_exists( 'indblog_inc_post_view' ) ) {
+
+    /**
+     * Increment post view meta when someone views a post.
+     *
+     * @since IND_BLOG_SINCE
+     */
+    function indblog_inc_post_view() {
+        // Return if it's not a post and in single page.
+        if ( ! is_singular( 'post' ) && 'post' === get_post_type() ) {
+            return;
+        }
+
+        $post_id        = get_the_ID();
+        $previous_views = (int) get_post_meta( $post_id, 'indblog_post_views', true );
+
+        // Increment views.
+        update_post_meta( $post_id, 'indblog_post_views', (int) $previous_views + 1 );
+    }
+}
+add_action( 'indblog_header', 'indblog_inc_post_view' );
