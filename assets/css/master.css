@@ -7817,14 +7817,15 @@ textarea.form-control-lg {
  *
  * Navbar CSS.
  */
-.indblog-navbar .navbar-nav {
-  padding: 0.75rem; }
-  .indblog-navbar .navbar-nav .nav-item .nav-link {
-    color: #1F4393;
-    font-weight: 200; }
-
-.indblog-navbar .site-branding img {
-  height: 50px; }
+.indblog-navbar {
+  box-shadow: 10px 20px 30px 20px #8080800f; }
+  .indblog-navbar .navbar-nav {
+    padding: 0.75rem; }
+    .indblog-navbar .navbar-nav .nav-item .nav-link {
+      color: #1F4393;
+      font-weight: 200; }
+  .indblog-navbar .site-branding img {
+    height: 50px; }
 
 /**
  * #.# Slider
@@ -7902,6 +7903,8 @@ textarea.form-control-lg {
     margin-top: 1rem;
     font-size: 0.875rem;
     color: #adb5bd; }
+  .indblog-article-content .article-content {
+    margin-top: 2rem; }
 
 .indblog-article-content-sm img {
   height: 110px; }
@@ -7956,6 +7959,17 @@ textarea.form-control-lg {
     cursor: not-allowed; }
   .indblog-subscribe .subscribe-processing .send-email-button {
     opacity: .5; }
+
+.comment-form .submit {
+  margin-top: 1rem;
+  background: #fff;
+  border: 1px solid #1F4393;
+  padding: 0.8rem 2.5rem;
+  border-radius: 0px;
+  transition: 0.4s ease; }
+  .comment-form .submit:hover {
+    background: #1F4393;
+    color: #fff; }
 
 /**
  * #.# Filter Section

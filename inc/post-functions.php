@@ -87,6 +87,11 @@ if ( ! function_exists( 'indblog_add_post_metabox_featured' ) ) {
     function indblog_post_featured_metabox() {
         $post_id  = get_the_ID();
         $featured = get_post_meta( $post_id, 'indblog_post_featured', true );
+
+        // Render meta box only for post.
+        if ( 'post' !== get_post_type( $post_id ) ) {
+            return;
+        }
         ?>
         <div class="indblog-post-featured-metabox">
             <label for="indblog_post_featured">
@@ -107,6 +112,11 @@ if ( ! function_exists( 'indblog_add_post_metabox_featured_save' ) ) {
      */
     function indblog_add_post_metabox_featured_save() {
         $post_id = get_the_ID();
+
+        // Apply meta box only for post.
+        if ( 'post' !== get_post_type( $post_id ) ) {
+            return;
+        }
 
         if ( isset( $_POST['indblog_post_featured'] ) ) {
             update_post_meta( $post_id, 'indblog_post_featured', 1 );

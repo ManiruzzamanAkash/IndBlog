@@ -80,6 +80,10 @@
         font-size: $font-size-sm;
         color: $gray-500;
     }
+
+    .article-content {
+        margin-top: 2rem;
+    }
 }
 
 .indblog-article-content-sm {
@@ -160,6 +164,22 @@
 
         .send-email-button {
             opacity: .5;
+        }
+    }
+}
+
+.comment-form {
+    .submit {
+        margin-top: 1rem;
+        background: #fff;
+        border: 1px solid $primary;
+        padding: 0.8rem 2.5rem;
+        border-radius: 0px;
+        transition: 0.4s ease;
+
+        &:hover {
+            background: $primary;
+            color: #fff;
         }
     }
 }
