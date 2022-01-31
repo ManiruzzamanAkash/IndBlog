@@ -30,9 +30,9 @@ if ( ! function_exists( 'indblog_get_post_categories' ) ) {
             $category = get_category( $cat );
             $categories .= sprintf(
                 /* translators: 1) Category URL, 2) Category Name */
-                __( "<a href='%s' class='article-category-name mr-2 %s'>%s</a>" ),
+                __( "<a href='%s' class='article-category-name mr-2 %s'>%s </a>" ),
                 __( get_category_link( $category ) ),
-                'text-white',
+                $for_slider ? 'text-white' : '',
                 $category->name
             );
         }

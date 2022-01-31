@@ -7994,10 +7994,18 @@ textarea.form-control-lg {
     padding: 10px 25px; }
     .indblog-filter-dropdown .dropdown-toggle::after {
       display: none; }
+  .indblog-filter-dropdown .dropdown-item.active,
+  .indblog-filter-dropdown .dropdown-item:active {
+    background: #1F4393;
+    color: #fff;
+    opacity: .5; }
 
-.btn-load-more:hover {
-  transition: .3s all;
-  opacity: .8; }
+.load-more {
+  margin-top: 5rem;
+  text-align: center; }
+  .load-more .btn-load-more:hover {
+    transition: .3s all;
+    opacity: .8; }
 
 /**
  * #.# Footer

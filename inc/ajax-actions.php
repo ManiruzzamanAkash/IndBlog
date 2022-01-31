@@ -9,6 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
 
+add_action( 'wp_ajax_indblog_subscribe_email', 'indblog_subscribe_email' );
+add_action( 'wp_ajax_indblog_category_filter', 'indblog_category_filter' );
+
 if ( ! function_exists( 'indblog_subscribe_email' ) ) {
 
     /**
@@ -66,4 +69,52 @@ if ( ! function_exists( 'indblog_subscribe_email' ) ) {
     }
 }
 
-add_action( 'wp_ajax_indblog_subscribe_email', 'indblog_subscribe_email' );
+if ( ! function_exists( 'indblog_category_filter' ) ) {
+
+    /**
+    * Get filtered category posts.
+    *
+    * @since IND_BLOG_SINCE
+    */
+    function indblog_category_filter() {
+        try {
+            // Nonce validate
+            if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['nonce'] ) ), 'indblog_nonce' ) ) {
+                throw new Exception( __( 'Nonce is invalid.', 'indblog' ) );
+            }
+
+            // Check category id added or not
+            if ( ! isset( $_POST['category_id'] ) || empty( $_POST['category_id'] ) ) {
+                throw new Exception( __( 'Category id is required.', 'indblog' ) );
+            }
+
+            $category_id = sanitize_text_field( wp_unslash( $_POST['category_id'] ) );
+
+            // Get posts of the category
+            $args = array(
+                'post_type'      => 'post',
+                'post_status'    => 'publish',
+                'posts_per_page' => -1,
+            );
+
+            if ( 'all' !== $category_id ) {
+                $args['tax_query'] = array(
+                    array(
+                        'taxonomy' => 'category',
+                        'field'    => 'term_id',
+                        'terms'    => $_POST['category_id'],
+                    ),
+                );
+            }
+
+            $posts = get_posts( $args );
+
+            ob_start();
+            get_template_part( 'template-parts/content/category-filter-articles', 'category', $posts );
+            $content = ob_get_clean();
+            wp_send_json_success( __( $content, 'indblog' ) );
+        } catch ( \Exception $e ) {
+            wp_send_json_error( $e->getMessage() );
+        }
+    }
+}

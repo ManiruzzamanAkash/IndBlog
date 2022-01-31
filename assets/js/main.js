@@ -59,4 +59,55 @@ jQuery(function ($) {
         $('input[name="subscribe_email"]').val(e.target.value);
     });
 
+    // -------------------------------------------------------------
+    //   Category Filter
+    // -------------------------------------------------------------
+
+    /**
+     * Get category posts
+     */
+    function getCategoryPosts( category_id = 'all', append_data = false, offset = 0 ) {
+        // Add loading spinner initially before loading...
+        $('#category-filter-articles').html( '<div class="text-center p-5 fs-1"><i class="fa fa-spinner fa-spin"></i></div>' );
+
+        $.ajax({
+            type: 'POST',
+            url: indblog_data.ajaxurl,
+            data: {
+                action     : 'indblog_category_filter',
+                category_id: category_id,
+                offset     : offset,
+                is_append  : append_data,
+                nonce      : indblog_data.nonce
+            },
+            success: function (response) {
+                if (response.success) {
+                    // Replace the category-filter-articles with response HTML data.
+                    $('#category-filter-articles').html( response.data );
+                } else {
+                    $('#category-filter-articles').html( response.data );
+                }
+            }
+        });
+    }
+
+    $('.category-filter-link').on('click', function (e) {
+        e.preventDefault();
+
+        // Get category id
+        const category_id = $(this).data('category_id');
+
+        // Get category name
+        const category_name = $(this).data('category_name');
+        $(".category-active-filter").html( category_name );
+
+        // Get category posts
+        getCategoryPosts( category_id );
+    });
+
+    // -------------------------------------------------------------
+    //   Infinite Load
+    // -------------------------------------------------------------
+    getCategoryPosts();
+
 });
