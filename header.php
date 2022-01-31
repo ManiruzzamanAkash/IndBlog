@@ -31,11 +31,14 @@ if ( ! defined( 'ABSPATH' ) ) {
      * @since IND_BLOG_SINCE
      */
     do_action( 'indblog_before_header' );
-    ?>
 
-    <?php get_template_part( 'template-parts/header/site-header' ); ?>
+    /**
+     * indblog_header hook
+     *
+     * @since IND_BLOG_SINCE
+     */
+    do_action( 'indblog_header' );
 
-    <?php
     /**
      * indblog_after_header hook
      *

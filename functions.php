@@ -69,3 +69,9 @@ add_action( 'after_setup_theme', 'indblog_setup' );
  */
 require get_template_directory() . '/inc/defaults.php';
 require get_template_directory() . '/inc/general.php';
+
+/**
+ * Load theme structure files
+ */
+require get_template_directory() . '/inc/structure/header.php';
+require get_template_directory() . '/inc/structure/footer.php';
