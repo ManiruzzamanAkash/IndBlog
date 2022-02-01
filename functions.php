@@ -76,5 +76,5 @@ require get_template_directory() . '/inc/post-functions.php';
 /**
  * Load theme structure files
  */
-require get_template_directory() . '/inc/structure/header.php';
-require get_template_directory() . '/inc/structure/footer.php';
+require get_template_directory() . '/template-parts/header/header.php';
+require get_template_directory() . '/template-parts/footer/footer.php';
