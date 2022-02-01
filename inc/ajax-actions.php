@@ -9,8 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
 
-add_action( 'wp_ajax_indblog_subscribe_email', 'indblog_subscribe_email' );
-add_action( 'wp_ajax_indblog_category_filter', 'indblog_category_filter' );
+add_action( 'wp_ajax_nopriv_indblog_subscribe_email', 'indblog_subscribe_email' );
+add_action( 'wp_ajax_nopriv_indblog_category_filter', 'indblog_category_filter' );
 
 if ( ! function_exists( 'indblog_subscribe_email' ) ) {
 
