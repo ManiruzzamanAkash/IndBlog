@@ -39,3 +39,8 @@ if ( ! defined('ABSPATH') ) {
     echo $menu_list;
     ?>
 <?php endif; ?>
+
+<!-- Site search-form -->
+<div class="indblog-searchbar <?php echo is_search() ? 'indblog-searchbar-active' : ''; ?>" >
+    <?php echo get_search_form(); ?>
+</div>

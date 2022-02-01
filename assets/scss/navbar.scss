@@ -23,3 +23,31 @@
         }
     }
 }
+
+/* Searchbar */
+.indblog-searchbar {
+    position: absolute;
+    display: none;
+    top: 78px;
+    right: 78px;
+
+    .search-field {
+        background: #fff;
+        border: 0px;
+        padding: 5px;
+        margin-top: 3px;
+    }
+
+    .search-submit {
+        padding: 5px;
+        background: #fff;
+        border: none;
+        margin-left: -4px;
+        border-left: 1px solid #ddd;
+        color: $primary;
+    }
+}
+
+.indblog-searchbar-active {
+    display: block;
+}

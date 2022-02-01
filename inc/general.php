@@ -9,6 +9,14 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
 
+// Filters
+add_filter( 'use_block_editor_for_post_type', 'indblog_disable_gutenberg', 10, 2 );
+add_filter( 'show_admin_bar', 'indblog_disable_admin_bar' );
+
+// Actions
+add_action( 'wp_enqueue_scripts', 'indblog_scripts' );
+add_action( 'after_setup_theme', 'indblog_after_setup_theme' );
+
 if ( ! function_exists( 'indblog_scripts' ) ) {
 
     /**
@@ -44,8 +52,6 @@ if ( ! function_exists( 'indblog_scripts' ) ) {
     }
 }
 
-add_action( 'wp_enqueue_scripts', 'indblog_scripts' );
-
 if ( ! function_exists( 'indblog_disable_admin_bar' ) ) {
 
     /**
@@ -57,8 +63,6 @@ if ( ! function_exists( 'indblog_disable_admin_bar' ) ) {
         return false;
     }
 }
-
-add_filter( 'show_admin_bar', 'indblog_disable_admin_bar' );
 
 
 if ( ! function_exists( 'indblog_disable_gutenberg' ) ) {
@@ -76,5 +80,13 @@ if ( ! function_exists( 'indblog_disable_gutenberg' ) ) {
     }
 }
 
-
-add_filter( 'use_block_editor_for_post_type', 'indblog_disable_gutenberg', 10, 2 );
+if ( ! function_exists( 'indblog_after_setup_theme' ) ) {
+    /**
+    * Enable html5 theme support
+    *
+    * @since IND_BLOG_SINCE
+    */
+    function indblog_after_setup_theme() {
+        add_theme_support( 'html5', array( 'search-form' ) );
+    }
+}

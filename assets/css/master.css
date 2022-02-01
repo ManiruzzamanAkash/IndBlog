@@ -7827,6 +7827,28 @@ textarea.form-control-lg {
   .indblog-navbar .site-branding img {
     height: 50px; }
 
+/* Searchbar */
+.indblog-searchbar {
+  position: absolute;
+  display: none;
+  top: 78px;
+  right: 78px; }
+  .indblog-searchbar .search-field {
+    background: #fff;
+    border: 0px;
+    padding: 5px;
+    margin-top: 3px; }
+  .indblog-searchbar .search-submit {
+    padding: 5px;
+    background: #fff;
+    border: none;
+    margin-left: -4px;
+    border-left: 1px solid #ddd;
+    color: #1F4393; }
+
+.indblog-searchbar-active {
+  display: block; }
+
 /**
  * #.# Slider
  *

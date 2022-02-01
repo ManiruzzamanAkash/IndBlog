@@ -1,6 +1,13 @@
 jQuery(function ($) {
 
     // -------------------------------------------------------------
+    //   Searchbar
+    // -------------------------------------------------------------
+    $('#search-link').click(function () {
+        $('.indblog-searchbar').toggleClass('indblog-searchbar-active');
+    });
+
+    // -------------------------------------------------------------
     //   Email Subscription
     // -------------------------------------------------------------
     $('.send-email-button').on('click', function (e) {
