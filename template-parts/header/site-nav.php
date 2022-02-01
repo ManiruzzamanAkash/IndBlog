@@ -41,6 +41,6 @@ if ( ! defined('ABSPATH') ) {
 <?php endif; ?>
 
 <!-- Site search-form -->
-<div class="indblog-searchbar <?php echo is_search() ? 'indblog-searchbar-active' : ''; ?>" >
+<div class="indblog-searchbar">
     <?php echo get_search_form(); ?>
 </div>

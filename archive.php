@@ -38,14 +38,7 @@ get_header();
                     ?>
                 </div>
                 <div class="col-sm-12 col-md-4">
-                    <div class="card card body p-3 mb-5 recent-post-sidebar">
-                        <h2 class="text-secondary-800 border-bottom pb-3 mb-3"><?php esc_html_e( 'Recent Posts', 'indblog' ); ?></h2>
-                        <?php wp_get_archives('type=postbypost&limit=10'); ?>
-                    </div>
-                    <div class="card card body p-3 mb-5">
-                        <h2 class="text-secondary-800 border-bottom pb-3 mb-3"><?php esc_html_e( 'Tags', 'indblog' ); ?></h2>
-                        <?php wp_tag_cloud( array( 'show_count' => true ) ); ?>
-                    </div>
+                    <?php get_template_part( 'template-parts/sidebar/sidebar', 'sidebar' ); ?>
                 </div>
             </div>
         </div>

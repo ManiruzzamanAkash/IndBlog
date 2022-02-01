@@ -41,7 +41,9 @@ if ( count( $featured_posts ) > 1 ) {
                     </p>
                     <?php if( ! is_null( $active_slider_post ) ): ?>
                         <h2 class="text-white">
-                            <?php echo esc_html( $active_slider_post->post_title ); ?>
+                            <a href="<?php echo esc_url( get_permalink( $active_slider_post ) ); ?>" class="text-white">
+                                <?php echo esc_html( $active_slider_post->post_title ); ?>
+                            </a>
                         </h2>
                         <h6 class="mt-2">
                             <?php echo indblog_get_post_categories( $post->ID, true ); ?>
@@ -65,7 +67,9 @@ if ( count( $featured_posts ) > 1 ) {
                             <?php echo indblog_get_post_categories( $post->ID, true ); ?>
                         </h6>
                         <h5 class="mt-1">
-                            <?php echo esc_html( $post->post_title ); ?>
+                            <a href="<?php echo esc_url( get_permalink( $post ) ); ?>" class="text-white">
+                                <?php echo esc_html( $post->post_title ); ?>
+                            </a>
                         </h5>
                         <p class="mt-1">
                             <?php echo esc_html( $post->author ); ?>
