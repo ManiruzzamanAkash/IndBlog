@@ -41,7 +41,7 @@ get_header(); ?>
                 </div>
                 <div class="col-sm-12 col-md-5">
                     <!-- Newsletter subscribe -->
-                    <?php get_template_part( 'template-parts/content/email-subscription' ); ?>
+                    <?php get_template_part( 'template-parts/email-subscription/email-subscription' ); ?>
                 </div>
             </div>
         </div>
