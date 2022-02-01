@@ -18,18 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
-<!-- Page Description header -->
-<div class="indblog-page-top-links bg-primary text-white">
-    <div class="container text-center">
-        <p class="p-2 fs-6">
-            <?php esc_html_e( 'Insights', 'indblog' ); ?>
-            &nbsp;&nbsp;
-            >
-            &nbsp;&nbsp;
-            <?php esc_html_e( 'All Content', 'indblog' ); ?>
-        </p>
-    </div>
-</div> <!-- indblog-page-top-links -->
+<!-- Page top breadcrumbs -->
+<?php get_template_part( 'template-parts/breadcrumbs/page-top-breadcrumbs' ); ?>
 
 <?php if( is_front_page() ): ?>
     <!-- Section: Slider -->

@@ -11,6 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
+<!-- Page top breadcrumbs -->
+<?php get_template_part( 'template-parts/breadcrumbs/page-top-breadcrumbs' ); ?>
+
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
     <div class="container">
         <div class="row justify-content-center">

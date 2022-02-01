@@ -13,6 +13,9 @@ get_header();
 
 ?>
 
+<!-- Page top breadcrumbs -->
+<?php get_template_part( 'template-parts/breadcrumbs/page-top-breadcrumbs' ); ?>
+
 <section id="main" class="indblog-section">
     <?php
     if ( have_posts() ) : ?>
