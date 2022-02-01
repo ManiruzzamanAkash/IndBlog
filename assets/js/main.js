@@ -74,8 +74,11 @@ jQuery(function ($) {
      * Get category posts
      */
     function getCategoryPosts( category_id = 'all', append_data = false, offset = 0 ) {
-        // Add loading spinner initially before loading...
-        $('#category-filter-articles').html( '<div class="text-center p-5 fs-1"><i class="fa fa-spinner fa-spin"></i></div>' );
+
+        if ( offset === 0 ) {
+            // Add loading spinner initially before loading...
+            $('#category-filter-articles').html( '<div class="text-center p-5 fs-1"><i class="fa fa-spinner fa-spin"></i></div>' );
+        }
 
         $.ajax({
             type: 'POST',
@@ -88,12 +91,35 @@ jQuery(function ($) {
                 nonce      : indblog_data.nonce
             },
             success: function (response) {
-                if (response.success) {
-                    // Replace the category-filter-articles with response HTML data.
-                    $('#category-filter-articles').html( response.data );
+                if ( offset !== 0 ) {
+                    if (response.success) {
+                        // Replace the category-filter-articles with response HTML data.
+                        $('#category-filter-load-more-articles').append( response.data.content );
+
+                        // update offset value to btn-load-more
+                        const offset_value = $('#filter_data_offset').val();
+                        if (offset_value === undefined || isNaN( offset_value )) {
+                            $('#filter_data_offset').val("0");
+                        } else {
+                            $('#filter_data_offset').val(parseInt(offset_value) + parseInt(response.data.offset));
+                        }
+                    } else {
+                        $('#category-filter-load-more-articles').html( response.data );
+                    }
                 } else {
-                    $('#category-filter-articles').html( response.data );
+                    if (response.success) {
+                        // Replace the category-filter-articles with response HTML data.
+                        $('#category-filter-articles').html( response.data.content );
+
+                        // update offset value to btn-load-more
+                        $('#filter_data_offset').val(response.data.offset);
+                    } else {
+                        $('#category-filter-articles').html( response.data );
+                    }
                 }
+
+                // Make load more button as it was previously
+                $('.btn-load-more').html( '<i class="fa fa-th"></i> &nbsp;' + indblog_data.i18n.load_more );
             }
         });
     }
@@ -149,13 +175,30 @@ jQuery(function ($) {
     });
 
     $('.most-view-prev').click(function(){
-        console.log('clicked left');
         $('.most-viewed-slick-carousel').slick('slickPrev', true);
     });
 
     $('.most-view-next').click(function(){
-        console.log('clicked next');
         $('.most-viewed-slick-carousel').slick('slickNext', true);
+    });
+
+    // -------------------------------------------------------------
+    // Load More Button
+    // -------------------------------------------------------------
+    $('.btn-load-more').on('click', function (e) {
+        e.preventDefault();
+
+        // change text to loading
+        $(this).html('<i class="fa fa-spinner fa-spin"></i> Loading...');
+
+        // Get category id
+        const category_id = $(".category-filter-link").data('category_id');
+
+        // Get offset value
+        const offset = $("#filter_data_offset").val();
+
+        // Get category posts
+        getCategoryPosts( category_id, true, offset );
     });
 
 });

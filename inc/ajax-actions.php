@@ -90,11 +90,21 @@ if ( ! function_exists( 'indblog_category_filter' ) ) {
 
             $category_id = sanitize_text_field( wp_unslash( $_POST['category_id'] ) );
 
+            // Check offset or not
+            if ( ! isset( $_POST['offset'] ) || empty( $_POST['offset'] ) ) {
+                $offset = 0;
+                $post_per_page = 7;
+            } else {
+                $offset = absint( wp_unslash( $_POST['offset'] ) );
+                $post_per_page = 8;
+            }
+
             // Get posts of the category
             $args = array(
                 'post_type'      => 'post',
                 'post_status'    => 'publish',
-                'posts_per_page' => -1,
+                'posts_per_page' => $post_per_page,
+                'offset'         => $offset,
             );
 
             if ( 'all' !== $category_id ) {
@@ -102,17 +112,27 @@ if ( ! function_exists( 'indblog_category_filter' ) ) {
                     array(
                         'taxonomy' => 'category',
                         'field'    => 'term_id',
-                        'terms'    => $_POST['category_id'],
+                        'terms'    => absint( $category_id ),
                     ),
                 );
             }
 
             $posts = get_posts( $args );
 
+            $posts_data = array(
+                'posts'  => $posts,
+                'offset' => $offset,
+            );
+
             ob_start();
-            get_template_part( 'template-parts/content/category-filter-articles', 'category', $posts );
+            get_template_part( 'template-parts/content/category-filter-articles', 'category', $posts_data );
             $content = ob_get_clean();
-            wp_send_json_success( __( $content, 'indblog' ) );
+
+            $data = array (
+                'content' => $content,
+                'offset'  => count( $posts ),
+            );
+            wp_send_json_success( __( $data, 'indblog' ) );
         } catch ( \Exception $e ) {
             wp_send_json_error( $e->getMessage() );
         }

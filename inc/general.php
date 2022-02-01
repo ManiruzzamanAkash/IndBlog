@@ -49,6 +49,8 @@ if ( ! function_exists( 'indblog_scripts' ) ) {
                 'i18n'    => array(
                     'subscribe_email_required' => __( 'Email is required.', 'indblog' ),
                     'subscribe_email_invalid'  => __( 'Email is invalid.', 'indblog' ),
+                    'load_more'                => __( 'Load More', 'indblog' ),
+                    'loading'                  => __( 'Loading', 'indblog' ),
                 ),
             )
         );

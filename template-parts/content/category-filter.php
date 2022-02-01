@@ -40,8 +40,10 @@ $categories = get_categories();
         </div>
 
         <div id="category-filter-articles"></div>
+        <div id="category-filter-load-more-articles"></div>
 
         <div class="load-more">
+            <input type="hidden" id="filter_data_offset" value="0">
             <button class="btn btn-outline rounded-0 px-5 py-2 border border-primary border-2 text-primary btn-load-more">
                 <i class="fa fa-th"></i> &nbsp;
                 <?php esc_html_e('Load More', 'indblog'); ?>

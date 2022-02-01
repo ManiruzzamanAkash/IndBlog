@@ -31,7 +31,7 @@ if ( count( $featured_posts ) > 1 ) {
 ?>
 
 <!-- Section: Slider -->
-<section class="indblog-section indblog-slider mt-0 bg-success" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post ); ?>')">
+<section class="indblog-section indblog-slider mt-0 bg-success" style="background-image: url('<?php echo get_the_post_thumbnail_url( $active_slider_post ); ?>')">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
