@@ -7945,7 +7945,7 @@ textarea.form-control-lg {
     margin: 1.5rem 0 1.5rem 1.5rem; }
   .indblog-article-content .inner-area {
     padding: 1.2rem 2rem;
-    box-shadow: 4px 5px 20px 11px #80808012; }
+    box-shadow: 0px 5px 11px 8px #80808008; }
   .indblog-article-content .article-meta {
     margin-top: 1rem;
     font-size: 0.875rem;
@@ -7970,7 +7970,8 @@ textarea.form-control-lg {
 
 .indblog-most-viewed-article .article-switch {
   color: #1F4393;
-  font-size: 1rem; }
+  font-size: 1rem;
+  cursor: pointer; }
 
 /* Content right side subscribe */
 .indblog-subscribe {

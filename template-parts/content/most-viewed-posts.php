@@ -25,20 +25,26 @@ $most_viewed_posts = new WP_Query( array(
         <?php esc_html_e('Most Viewed', 'indblog'); ?>
     </h2>
     <div class="article-switch">
-        <span class="previous-post">
+        <span class="previous-post most-view-prev">
             <i class="fa fa-arrow-left"></i>
-        </span class="next-post">
-        <i class="fa fa-arrow-right"></i>
+        </span>
+        <span class="next-post most-view-next">
+            <i class="fa fa-arrow-right"></i>
+        </span>
     </div>
 </div>
 <div class="row">
     <?php if ( $most_viewed_posts->have_posts() ) : ?>
-        <?php while ( $most_viewed_posts->have_posts() ) : $most_viewed_posts->the_post(); ?>
-        <div class="col-sm-12 col-md-6">
-            <?php get_template_part( 'template-parts/content/article-mini', 'most_viewed_post', get_post( get_the_ID() ) ); ?>
+        <div class="most-viewed-slick-carousel">
+            <?php while ( $most_viewed_posts->have_posts() ) : $most_viewed_posts->the_post(); ?>
+            <div class="col-sm-12 col-md-6">
+                <div class="m-3">
+                <?php get_template_part( 'template-parts/content/article-mini', 'most_viewed_post', get_post( get_the_ID() ) ); ?>
+                </div>
+            </div>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
         </div>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
     <?php else : ?>
         <div class="col-sm-12 col-md-12">
             <?php get_template_part( 'template-parts/content/no-post' ); ?>

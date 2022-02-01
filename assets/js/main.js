@@ -117,4 +117,45 @@ jQuery(function ($) {
     // -------------------------------------------------------------
     getCategoryPosts();
 
+
+    // -------------------------------------------------------------
+    //   Slick carousel for most viewed post
+    // -------------------------------------------------------------
+    $('.most-viewed-slick-carousel').slick({
+        dots: false,
+        slidesToShow: 2,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
+    $('.most-view-prev').click(function(){
+        console.log('clicked left');
+        $('.most-viewed-slick-carousel').slick('slickPrev', true);
+    });
+
+    $('.most-view-next').click(function(){
+        console.log('clicked next');
+        $('.most-viewed-slick-carousel').slick('slickNext', true);
+    });
+
 });
