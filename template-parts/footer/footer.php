@@ -24,28 +24,16 @@ if ( ! function_exists( 'indblog_construct_footer' ) ) {
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-sm-12">
-                        <ul class="footer-menus">
-                            <li>
-                                <a href="#">
-                                    <?php esc_html_e('Insights', 'indblog'); ?>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <?php esc_html_e('Industries', 'indblog'); ?>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <?php esc_html_e('Innovations', 'indblog'); ?>
-                                </a>
-                            </li>
-                        </ul>
+                        <?php get_template_part( 'template-parts/footer/footer-menus' ); ?>
 
                         <div class="mt-4">
                             <p>
-                                <?php esc_html_e('Contact Us', 'indblog'); ?>
-                                <i class="fa fa-phone"></i> 18666715353
+                                <span>
+                                    <?php esc_html_e('Contact Us', 'indblog'); ?>
+                                </span>
+                                <span class="mx-3">
+                                    <i class="fa fa-phone"></i> 18666715353
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -54,7 +42,7 @@ if ( ! function_exists( 'indblog_construct_footer' ) ) {
                             <?php esc_html_e('Subscribe to our newsletter', 'indblog'); ?>
                         </p>
                         <p class="subscribe-input subscribe-input-footer mt-4">
-                            <input class="form-control" name="subscribe_email" type="email" placeholder="<?php esc_attr_e('Enter your email', 'indblog'); ?>" />
+                            <input class="form-control" name="subscribe_email" type="email" placeholder="<?php esc_attr_e( 'Enter your email', 'indblog' ); ?>" />
                             <span class="send-email-button">
                                 <i class="fa fa-envelope"></i>
                             </span>
@@ -65,7 +53,7 @@ if ( ! function_exists( 'indblog_construct_footer' ) ) {
                 <div class="row mt-5">
                     <div class="col-md-8">
                         <p class="copyright">
-                            <?php esc_html_e('Copyright © All Rights Reserved', 'indblog'); ?>
+                            <?php echo apply_filters( 'indblog_footer_copyright', __( 'Copyright © All Rights Reserved', 'indblog' ) ); ?>
                         </p>
                     </div>
                     <div class="col-md-4">

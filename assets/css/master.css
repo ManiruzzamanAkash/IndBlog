@@ -8107,6 +8107,7 @@ textarea.form-control-lg {
       background-color: #fff;
       border-radius: 0px 10px;
       position: absolute;
+      cursor: pointer;
       color: #495057;
       padding: 5px;
       padding-left: 7px;
