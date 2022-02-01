@@ -3,6 +3,9 @@
 A WordPress theme for industry owners blogging
 
 ---
+## Demo Live URL:
+http://blog.devsenv.com
+
 
 ## Dev Environment Setup
 ```sh
