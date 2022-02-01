@@ -23,7 +23,7 @@ get_header(); ?>
 
 <?php if( is_front_page() ): ?>
     <!-- Section: Slider -->
-    <?php get_template_part( 'template-parts/content/slider' ); ?>
+    <?php get_template_part( 'template-parts/slider/slider' ); ?>
 <?php endif; ?>
 
 <?php if( ! is_singular() ): ?>
